@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden; /* Para evitar el scroll al caer serpentinas */
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yesButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#noButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.serpentina {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 30px;
+  opacity: 0.8;
+  animation: caer 2s linear forwards;
+}
+
+@keyframes caer {
+  to {
+      transform: translateY(100vh) rotate(360deg); /* Añadir rotación para mayor efecto */
+      opacity: 0;
+  }
+}
